@@ -147,7 +147,7 @@ def clean_code(df1):
 #================================
 # import dataset
 
-df = read_excel('train.xlsx')
+df = pd.read_excel('train.xlsx')
 
 #limpando os dados
 df1 = clean_code(df)
