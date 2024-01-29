@@ -147,17 +147,7 @@ def clean_code(df1):
 #================================
 # import dataset
 
-# Use a variável __file__ para obter o caminho do script atual
-script_dir = os.path.dirname(os.path.abspath(__file__))
-
-base_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
-# Construa o caminho completo para o arquivo Excel usando o diretório do script
-excel_path = os.path.join(base_dir, 'dataset', 'train.xlsx')
-
-# Leitura do arquivo Excel
-df = pd.read_excel(excel_path)
-
-# ...
+df = read_excel('train.xlsx')
 
 #limpando os dados
 df1 = clean_code(df)
