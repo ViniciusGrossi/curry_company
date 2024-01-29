@@ -151,6 +151,7 @@ def clean_code(df1):
 # Use a variável __file__ para obter o caminho do script atual
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
+base_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 # Construa o caminho completo para o arquivo Excel usando o diretório do script
 excel_file_path = os.path.join(script_directory, '..', 'dataset', 'train.xlsx')
 
