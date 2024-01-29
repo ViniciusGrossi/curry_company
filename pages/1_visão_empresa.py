@@ -5,6 +5,7 @@ import streamlit as st
 import plotly.express as px
 import folium as folium
 import plotly.graph_objects as go
+import os
 
 from datetime import datetime
 from PIL import Image
@@ -145,7 +146,18 @@ def clean_code(df1):
 #--------------------------------------------- Início da Estrutura lógica do código ---------------------------------------------------
 #================================
 # import dataset
-df = pd.read_excel('../dataset/train.xlsx')
+
+# Use a variável __file__ para obter o caminho do script atual
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Construa o caminho completo para o arquivo Excel usando o diretório do script
+excel_file_path = os.path.join(script_directory, '..', 'dataset', 'train.xlsx')
+
+# Leitura do arquivo Excel
+df = pd.read_excel(excel_file_path)
+
+# ...
+
 #limpando os dados
 df1 = clean_code(df)
 
