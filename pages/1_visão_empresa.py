@@ -6,6 +6,7 @@ import plotly.express as px
 import folium as folium
 import plotly.graph_objects as go
 import os
+import openpyxl
 
 from datetime import datetime
 from PIL import Image
